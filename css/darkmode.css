@@ -1,0 +1,255 @@
+/* ============================================
+   DARK MODE — BLOOM (Plum Version)
+   ============================================ */
+
+body.a11y-dark-mode {
+  --dm-bg: #1c1622;
+  --dm-surface: #261c2f;
+  --dm-surface-soft: #2f2238;
+  --dm-card: #35273f;
+  --dm-card-alt: #3f2d48;
+  --dm-footer: #17121d;
+
+  --dm-text: #f6f2f5;
+  --dm-text-soft: #e9dde5;
+  --dm-text-muted: #d6c7d2;
+  --dm-heading: #ffffff;
+
+  --dm-link: var(--accent-rose);
+  --dm-link-hover: var(--accent-blush);
+
+  --dm-border: rgba(255, 255, 255, 0.1);
+  --dm-border-strong: rgba(255, 255, 255, 0.2);
+  --dm-focus: var(--accent-blush-light);
+
+  background-color: var(--dm-bg) !important;
+  color: var(--dm-text) !important;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+body.a11y-dark-mode :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--dm-heading) !important;
+}
+
+body.a11y-dark-mode
+  :is(
+    p,
+    li,
+    label,
+    .hero-subtitle,
+    .section-desc,
+    .stat-label,
+    .program-meta span,
+    .text-plum
+  ) {
+  color: var(--dm-text-soft) !important;
+}
+
+body.a11y-dark-mode a {
+  color: var(--dm-link) !important;
+}
+
+body.a11y-dark-mode a:hover {
+  color: var(--dm-link-hover) !important;
+}
+
+body.a11y-dark-mode .navbar-brand span {
+  color: var(--accent-blush-light);
+}
+
+/* Program meta icons */
+body.a11y-dark-mode .program-meta span i {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ============================================
+   BACKGROUNDS / SECTIONS
+   ============================================ */
+
+body.a11y-dark-mode .bg-ivory {
+  background: var(--dm-bg) !important;
+}
+
+body.a11y-dark-mode :is(.bg-cream, .bg-warm-white) {
+  background-color: #2a1f33 !important;
+}
+
+body.a11y-dark-mode .hero-section,
+body.a11y-dark-mode .page-hero {
+  background: linear-gradient(135deg, #1c1622, #2f2238, #3f2d48) !important;
+}
+
+body.a11y-dark-mode .bg-deep-plum {
+  background: linear-gradient(
+    180deg,
+    #1c1622 0%,
+    #2a1f33 25%,
+    #35273f 50%,
+    #2a1f33 75%,
+    #1c1622 100%
+  ) !important;
+}
+
+/* ============================================
+   CARDS / SURFACES
+   ============================================ */
+
+body.a11y-dark-mode :is(.card-bloom, .program-card, .opportunity-card) {
+  background: var(--dm-card) !important;
+  border-color: var(--dm-border) !important;
+}
+
+body.a11y-dark-mode .contact-info-card {
+  background: var(--dm-surface) !important;
+  border-color: var(--dm-border) !important;
+}
+
+body.a11y-dark-mode .contact-address {
+  color: var(--dm-link) !important;
+}
+
+body.a11y-dark-mode .opp-search-filter {
+  background: var(--dm-card-alt) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+body.a11y-dark-mode .btn-bloom-primary {
+  background-color: var(--cta-primary) !important;
+  color: #fff !important;
+}
+
+body.a11y-dark-mode .btn-bloom-primary:hover {
+  background-color: var(--cta-primary-hover) !important;
+}
+
+body.a11y-dark-mode .btn-bloom-light {
+  background-color: var(--accent-rose) !important;
+  color: var(--deep-plum) !important;
+  border: 2px solid var(--accent-rose) !important;
+}
+
+body.a11y-dark-mode .btn-bloom-outline {
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  color: var(--accent-rose) !important;
+}
+
+/* CTA button hover to match primary */
+body.a11y-dark-mode .cta-banner .btn-bloom-light:hover {
+  background-color: var(--cta-primary) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+body.a11y-dark-mode :is(.form-control, .form-select) {
+  background: var(--dm-surface) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .opp-search-filter .form-control {
+  color: var(--dm-text-muted) !important;
+}
+
+body.a11y-dark-mode .opp-search-filter .form-control::placeholder {
+  color: var(--dm-text-muted) !important;
+  opacity: 1;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+body.a11y-dark-mode .navbar-bloom {
+  background-color: var(--dm-surface) !important;
+}
+
+body.a11y-dark-mode .navbar-bloom .nav-link {
+  color: var(--dm-text) !important;
+}
+
+body.a11y-dark-mode .navbar-bloom .nav-link:hover {
+  background: rgba(212, 165, 172, 0.1) !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+body.a11y-dark-mode .footer-bloom {
+  background-color: var(--dm-footer) !important;
+}
+
+body.a11y-dark-mode .footer-bloom :is(p, a) {
+  color: var(--dm-text-soft) !important;
+}
+
+/* ============================================
+   ICONS / SPECIAL COMPONENTS
+   ============================================ */
+
+/* About page icons match home style */
+body.a11y-dark-mode .about-values .value-icon {
+  background: var(--accent-blush-light) !important;
+  color: var(--deep-plum) !important;
+  border: none !important;
+}
+
+/* Opportunity badges */
+body.a11y-dark-mode
+  :is(
+    .opportunity-card .opp-type,
+    .opportunity-card .opp-type-career,
+    .opportunity-card .opp-type-freelance
+  ) {
+  color: var(--dm-text-soft) !important;
+}
+
+body.a11y-dark-mode :is(.opportunity-card .opp-type-mentorship) {
+  background: var(--dm-card-alt) !important;
+}
+/* ============================================
+   ACCESSIBILITY / FOCUS
+   ============================================ */
+
+body.a11y-dark-mode .btn-bloom-light:focus,
+body.a11y-dark-mode .btn-bloom-light:focus-visible {
+  background-color: var(--deep-plum) !important;
+  color: var(--dm-focus) !important;
+  border: 2px solid var(--dm-focus) !important;
+  outline: 3px solid var(--dm-focus) !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+}
+
+body.a11y-dark-mode .btn-bloom-primary:focus,
+body.a11y-dark-mode .btn-bloom-primary:focus-visible {
+  background-color: var(--dm-focus) !important;
+  color: #2a1830 !important;
+  border-color: var(--dm-focus) !important;
+  outline: 3px solid var(--dm-focus) !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+}
+
+body.a11y-dark-mode :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus,
+body.a11y-dark-mode
+  :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus-visible {
+  outline: 3px solid var(--dm-focus) !important;
+  outline-offset: 3px !important;
+  color: var(--dm-focus) !important;
+  border-color: var(--dm-focus) !important;
+  box-shadow: none !important;
+}

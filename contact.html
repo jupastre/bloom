@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Bloom. Whether you have questions about our programs, want to partner with us, or simply need guidance, we are here for you.">
+  <title>Contact — Bloom</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-bloom" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Bloom — Home">Bloo<span>m</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-bloom btn-bloom-primary" href="programs.html">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero" aria-label="Contact Us">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+        <h1 data-aos="fade-up">Get in Touch</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100" style="max-width: 600px;">
+          Whether you have questions about our programs, want to explore partnerships, or simply need someone to listen —
+          we’re here for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-ivory" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Contact Form -->
+          <div class="col-lg-7" data-aos="fade-right">
+            <h2 id="contact-form-heading">Send Us a Message</h2>
+            <div class="divider-bloom mb-4"></div>
+            <p class="mb-4">
+              Fill out the form below and a member of our team will respond within two business days.
+              All fields marked with an asterisk (<span aria-hidden="true">*</span><span class="visually-hidden">asterisk, required</span>) are required.
+            </p>
+
+            <form id="contact-form" class="form-bloom" novalidate aria-label="Contact form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contact-first-name" class="form-label">First Name <span aria-hidden="true">*</span></label>
+                  <input type="text" class="form-control" id="contact-first-name" name="firstName" placeholder="" required aria-required="true" autocomplete="given-name">
+                  <div class="invalid-feedback">Please enter your first name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="contact-last-name" class="form-label">Last Name <span aria-hidden="true">*</span></label>
+                  <input type="text" class="form-control" id="contact-last-name" name="lastName" placeholder="" required aria-required="true" autocomplete="family-name">
+                  <div class="invalid-feedback">Please enter your last name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="contact-email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                  <input type="email" class="form-control" id="contact-email" name="email" placeholder="your.email@example.com" required aria-required="true" autocomplete="email">
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="contact-phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="+353 (83) 123 4567" autocomplete="tel">
+                  <span class="form-text">Optional — we will only call if you request it.</span>
+                </div>
+                <div class="col-12">
+                  <label for="contact-subject" class="form-label">Subject <span aria-hidden="true">*</span></label>
+                  <select class="form-select" id="contact-subject" name="subject" required aria-required="true">
+                    <option value="" disabled selected>Please select a topic</option>
+                    <option value="programs">Program Information</option>
+                    <option value="opportunities">Opportunities</option>
+                    <option value="partnership">Partnership Inquiry</option>
+                    <option value="consultation">Free Consultation</option>
+                    <option value="support">General Support</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a subject.</div>
+                </div>
+                <div class="col-12">
+                  <label for="contact-age-range" class="form-label">Age Range</label>
+                  <select class="form-select" id="contact-age-range" name="ageRange">
+                    <option value="" disabled selected>Select your age range (optional)</option>
+                    <option value="40-44">40 – 44</option>
+                    <option value="45-49">45 – 49</option>
+                    <option value="50-54">50 – 54</option>
+                    <option value="55-59">55 – 59</option>
+                    <option value="60-64">60 – 64</option>
+                    <option value="65+">65 and above</option>
+                    <option value="prefer-not">Prefer not to say</option>
+                  </select>
+                  <span class="form-text">This helps us tailor our response to your needs.</span>
+                </div>
+                <div class="col-12">
+                  <label for="contact-message" class="form-label">Your Message <span aria-hidden="true">*</span></label>
+                  <textarea class="form-control" id="contact-message" name="message" rows="6" placeholder="Tell us how we can help you. Share as much or as little as you feel comfortable with." required aria-required="true"></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="contact-newsletter" name="newsletter" value="yes">
+                    <label class="form-check-label" for="contact-newsletter" style="font-size: 0.9rem;">
+                      I would like to receive Bloom's newsletter with career insights and opportunities.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="contact-privacy" name="privacy" required aria-required="true">
+                    <label class="form-check-label" for="contact-privacy" style="font-size: 0.9rem;">
+                      I agree to the <a href="privacy.html">Privacy Policy</a> and consent to Bloom processing my information. <span aria-hidden="true">*</span>
+                    </label>
+                    <div class="invalid-feedback">You must agree to the privacy policy to submit this form.</div>
+                  </div>
+                </div>
+                <div class="col-12 mt-3">
+                  <button type="submit" class="btn btn-bloom btn-bloom-primary">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Error Message -->
+            <div class="form-error-message mt-3" id="form-error" role="alert" aria-live="assertive" style="display:none;">
+              <p class="mb-0" style="color:#b91c1c;"><strong>Please fix the errors above before submitting.</strong> All required fields must be completed correctly.</p>
+            </div>
+
+            <!-- Success Message -->
+            <div class="form-success-message mt-4" id="form-success" role="alert" aria-live="polite" tabindex="-1">
+              <div style="font-size:2.5rem;margin-bottom:0.75rem;" aria-hidden="true">&#10003;</div>
+              <h3 class="text-plum">Thank You for Reaching Out</h3>
+              <p class="mb-0">Your message has been received. A member of our team will get back to you within two business days. In the meantime, feel free to explore our <a href="programs.html">programs</a> or browse <a href="opportunities.html">opportunities</a>.</p>
+            </div>
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="contact-info-sidebar">
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon" aria-hidden="true">&#9993;</div>
+                <div>
+                  <h4>Email Us</h4>
+                  <p>For general inquiries and program questions</p>
+                  <a href="mailto:hello@bloom-platform.com" class="contact-link">hello@bloom-platform.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon" aria-hidden="true">&#9742;</div>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>Monday to Friday, 9 AM to 5 PM </p>
+                  <a href="tel:+353831234567" class="contact-link">+353 (83) 123 4567</a>
+                </div>
+              </div>
+
+
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon" aria-hidden="true">&#9873;</div>
+                <div>
+                  <h4>Visit Us</h4>
+                  <p>By appointment only</p>
+                  <address class="contact-address">
+                    245 Main Street<br>
+                    Dublin, Ireland
+                  </address>
+                </div>
+              </div>
+
+              <div class="contact-info-card contact-info-card-highlight">
+                <h4>Partnership Inquiries</h4>
+                <p>Interested in partnering with Bloom to support women in career transition? We would love to hear from you.</p>
+                <a href="mailto:partners@bloom-platform.com" class="btn btn-bloom btn-bloom-outline w-100">Email Our Partnership Team</a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-cream" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">Common Questions</span>
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="divider-bloom"></div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    Who is Bloom designed for?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    Bloom is designed for women aged 40 and above who are navigating career transitions, returning to the workforce after a break, pivoting to a new field, or seeking to rebuild their professional identity. Whether you are 45, 55, or 65, our programs are tailored to meet you where you are.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    Is Bloom a job board?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    No. Bloom is a transformation platform, not a job board. While we do curate age-inclusive opportunities, our primary focus is on career coaching, identity rebuilding, skills development, and community support. We help you become ready for your next chapter, whatever that looks like for you.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    How much do the programs cost?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    Program pricing varies depending on the duration and level of support. We offer flexible payment plans and a limited number of scholarships for women who need financial assistance. Contact us for detailed pricing information and to discuss options that work for your budget.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    Can I participate if I live outside Ireland?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    Absolutely. All of our programs are available virtually, and we have participants from over 35 countries. Our coaching sessions and workshops are scheduled to accommodate multiple time zones, and all materials are accessible online.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    What if I am not sure what I want to do next?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    That is perfectly okay — and more common than you might think. Our Identity and Purpose Workshop is specifically designed for women who are still exploring. You do not need to have all the answers before you begin. We will help you find clarity along the way.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    How does Bloom help with career transition specifically?
+                  </button>
+                </h3>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    Bloom provides a structured approach to career transition through personalized coaching, skills assessment, resume and LinkedIn optimization, interview preparation, and strategic networking. Our certified career strategists work with you one-on-one to create a tailored roadmap that leverages your decades of experience and aligns with your goals for the next chapter.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    I feel too old to start over. Is it really possible?
+                  </button>
+                </h3>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    Absolutely. Age is not a barrier — it is an asset. Our community includes women who have successfully transitioned careers in their 40s, 50s, 60s, and beyond. Many of our most inspiring success stories come from women who felt exactly the way you do right now. With the right support, guidance, and community, reinvention at any age is not only possible — it is powerful.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="border: var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-charcoal);">
+                    How do I regain confidence after being out of the workforce?
+                  </button>
+                </h3>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body" style="font-size: 0.95rem; color: var(--text-muted);">
+                    Rebuilding confidence is at the heart of what we do. Our programs include strengths-based assessments that help you recognize the incredible skills you already have, group workshops where you connect with women on similar journeys, and one-on-one coaching that provides personalized encouragement and accountability. Many women tell us that simply being part of the Bloom community reignites their sense of possibility.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-bloom" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5>Bloo<span style="color: var(--accent-rose);">m</span></h5>
+          <p>A premium career transition and identity rebuilding platform for women aged 40 and beyond. Your experience is your superpower.</p>
+          <div class="footer-social mt-3" aria-label="Social media links">
+            <span aria-label="LinkedIn coming soon" title="LinkedIn coming soon">
+              <img src="./icons/linkedIn.svg" alt="">
+            </span>
+            <span aria-label="Instagram coming soon" title="Instagram coming soon">
+              <img src="./icons/instagram.svg" alt="">
+            </span>
+            <span aria-label="Facebook coming soon" title="Facebook coming soon">
+              <img src="./icons/face.svg" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="footer-list col-6 col-lg-2">
+          <h5>Navigate</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="opportunities.html">Opportunities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-list col-6 col-lg-2">
+          <h5>Resources</h5>
+          <ul class="footer-links">
+            <li><span>Career Guide</span></li>
+            <li><span>Blog</span></li>
+            <li><span>Success Stories</span></li>
+            <li><span>FAQ</span></li>
+          </ul>
+        </div>
+        <div class="footer-list col-lg-4">
+          <h5>Stay Inspired</h5>
+          <p>Join our newsletter for career insights, stories of transformation, and exclusive opportunities.</p>
+          <div class="newsletter-inline">
+            <form class="input-group" aria-label="Newsletter signup">
+              <label for="newsletter-email-contact" class="visually-hidden">Email address</label>
+              <input type="email" class="form-control" id="newsletter-email-contact" placeholder="Your email " aria-label="Email address" required>
+              <button class="btn btn-bloom btn-bloom-primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Bloom. All rights reserved. Designed with care for women who dare to begin again.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
