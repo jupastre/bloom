@@ -1,7 +1,8 @@
 /* ============================================
-   HIGH CONTRAST MODE — VARIABLES & BASE
+   HIGH CONTRAST MODE — BLOOM
    ============================================ */
 
+/* ---------- Variables and Base ---------- */
 body.a11y-high-contrast {
   --hc-bg: #000;
   --hc-surface: #111;
@@ -14,10 +15,7 @@ body.a11y-high-contrast {
   color: var(--hc-text) !important;
 }
 
-/* ============================================
-   TYPOGRAPHY — FORCE READABILITY
-   ============================================ */
-
+/* ---------- Typography ---------- */
 body.a11y-high-contrast
   :is(
     h1,
@@ -37,26 +35,20 @@ body.a11y-high-contrast
     .testimonial-card span,
     .contact-info-card,
     .contact-info-card *,
-    .contact-info-card h4,
-    .contact-info-card .contact-link
+    .contact-info-card h4
   ) {
   color: var(--hc-text) !important;
 }
 
-/* Accent elements */
-body.a11y-high-contrast :is(a, .stat-number, .text-plum) {
+body.a11y-high-contrast :is(a, .stat-number, .text-plum, .contact-info-card .contact-link) {
   color: var(--hc-accent) !important;
 }
 
-/* Quote icon */
 body.a11y-high-contrast .testimonial-card::before {
   color: var(--hc-text) !important;
 }
 
-/* ============================================
-   GLOBAL BACKGROUND OVERRIDES
-   ============================================ */
-
+/* ---------- Global Backgrounds ---------- */
 body.a11y-high-contrast
   :is(
     .navbar-bloom,
@@ -76,7 +68,6 @@ body.a11y-high-contrast
   color: var(--hc-text) !important;
 }
 
-/* Remove gradients and decorative layers */
 body.a11y-high-contrast
   :is(
     .hero-section::before,
@@ -87,10 +78,7 @@ body.a11y-high-contrast
   display: none !important;
 }
 
-/* ============================================
-   CARDS & SURFACES
-   ============================================ */
-
+/* ---------- Cards and Surfaces ---------- */
 body.a11y-high-contrast
   :is(
     .card-bloom,
@@ -100,27 +88,24 @@ body.a11y-high-contrast
     .opp-search-filter,
     .cta-banner,
     .accordion-item,
+    .contact-info-card,
     .contact-info-sidebar .contact-info-card
   ) {
   background: var(--hc-surface) !important;
   border: 2px solid var(--hc-border) !important;
+  color: var(--hc-text) !important;
   box-shadow: none !important;
 }
 
-/* Highlight main cards with accent border */
 body.a11y-high-contrast .card-bloom {
   border-color: var(--hc-accent) !important;
 }
 
-/* Logo cards stay neutral */
 body.a11y-high-contrast .logo-card {
   border: 2px solid var(--hc-border) !important;
 }
 
-/* ============================================
-   ICON SYSTEM
-   ============================================ */
-
+/* ---------- Icons ---------- */
 body.a11y-high-contrast
   :is(
     .card-icon,
@@ -136,7 +121,6 @@ body.a11y-high-contrast
   color: var(--hc-accent) !important;
 }
 
-/* Force icon color consistency */
 body.a11y-high-contrast
   :is(
     .card-icon *,
@@ -152,17 +136,13 @@ body.a11y-high-contrast
   stroke: var(--hc-accent) !important;
 }
 
-/* Timeline markers */
+/* ---------- Timeline ---------- */
 body.a11y-high-contrast .timeline-item::before {
   background: var(--hc-accent) !important;
   border: 2px solid var(--hc-bg) !important;
 }
 
-/* ============================================
-   BUTTONS & INTERACTIVE ELEMENTS
-   ============================================ */
-
-/* Base button style (outline look) */
+/* ---------- Buttons and Interactive Elements ---------- */
 body.a11y-high-contrast
   :is(.btn-bloom-outline, .btn-bloom-light, .a11y-panel-reset, .opp-tag) {
   background: var(--hc-bg) !important;
@@ -170,7 +150,6 @@ body.a11y-high-contrast
   border: 2px solid var(--hc-border) !important;
 }
 
-/* Hover & active inversion */
 body.a11y-high-contrast
   :is(
     .btn-bloom-outline:hover,
@@ -183,15 +162,8 @@ body.a11y-high-contrast
   color: var(--hc-bg) !important;
 }
 
-/* Primary action buttons */
 body.a11y-high-contrast
   :is(.btn-bloom-primary, .filter-btn.active, .a11y-toolbar-toggle) {
-  background: var(--hc-accent) !important;
-  color: var(--hc-bg) !important;
-  border: 2px solid var(--hc-accent) !important;
-}
-
-body.a11y-high-contrast .a11y-toolbar-toggle {
   background: var(--hc-accent) !important;
   color: var(--hc-bg) !important;
   border: 2px solid var(--hc-accent) !important;
@@ -201,15 +173,11 @@ body.a11y-high-contrast .a11y-toolbar-toggle::after {
   border: 2px solid var(--hc-accent) !important;
 }
 
-/* Ensure text inside tags remains readable */
 body.a11y-high-contrast .opp-tag * {
   color: var(--hc-text) !important;
 }
 
-/* ============================================
-   FORMS & ACCORDION
-   ============================================ */
-
+/* ---------- Forms and Accordion ---------- */
 body.a11y-high-contrast
   :is(.form-control, .form-select, .accordion-button, .a11y-panel-btn) {
   background: var(--hc-surface) !important;
@@ -217,37 +185,22 @@ body.a11y-high-contrast
   border: 2px solid var(--hc-border) !important;
 }
 
-/* Placeholder visibility */
 body.a11y-high-contrast input::placeholder {
   color: var(--hc-text) !important;
   opacity: 1;
 }
 
-/* Accordion arrow color */
 body.a11y-high-contrast .accordion-button::after {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%)
     hue-rotate(0deg);
 }
 
-/* Remove default focus styles */
-/* Focus accordion - FIX */
-body.a11y-high-contrast .accordion-button:focus,
-body.a11y-high-contrast .accordion-button:focus-visible {
-  outline: 3px solid var(--hc-accent) !important;
-  outline-offset: 4px !important;
-  box-shadow: 0 0 0 3px var(--hc-bg) !important;
-}
-
-/* Checkbox styling */
 body.a11y-high-contrast .form-check-input:checked {
   background-color: var(--hc-bg) !important;
   border-color: var(--hc-accent) !important;
 }
 
-/* ============================================
-   FILTERS & DECORATIVE ELEMENTS
-   ============================================ */
-
+/* ---------- Filters and Decorative Elements ---------- */
 body.a11y-high-contrast .filter-btn {
   border: 2px solid var(--hc-border) !important;
   color: var(--hc-text) !important;
@@ -262,15 +215,11 @@ body.a11y-high-contrast
   background: var(--hc-accent) !important;
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
-
+/* ---------- Navigation ---------- */
 body.a11y-high-contrast .navbar-bloom .nav-link {
   color: var(--hc-text) !important;
 }
 
-/* Hover + active state */
 body.a11y-high-contrast .navbar-bloom .nav-link:hover,
 body.a11y-high-contrast .navbar-bloom .nav-link.active {
   background: var(--hc-accent) !important;
@@ -278,20 +227,15 @@ body.a11y-high-contrast .navbar-bloom .nav-link.active {
   border-radius: 6px;
 }
 
-/* Remove underline indicator */
 body.a11y-high-contrast .navbar-bloom .nav-link.active::after {
   display: none !important;
 }
 
-/* Hamburger icon */
 body.a11y-high-contrast .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffff00' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-/* ============================================
-   ACCESSIBILITY PANEL
-   ============================================ */
-
+/* ---------- Accessibility Panel ---------- */
 body.a11y-high-contrast .a11y-panel {
   border: 2px solid var(--hc-border) !important;
 }
@@ -300,45 +244,24 @@ body.a11y-high-contrast .a11y-panel h3 {
   border-bottom: 2px solid var(--hc-border) !important;
 }
 
-/* Panel buttons */
-body.a11y-high-contrast .a11y-panel-btn {
-  background: var(--hc-surface) !important;
-  color: var(--hc-text) !important;
-  border: 2px solid var(--hc-border) !important;
-}
-
-/* Hover & active */
 body.a11y-high-contrast .a11y-panel-btn:hover,
 body.a11y-high-contrast .a11y-panel-btn.active {
   background: var(--hc-accent) !important;
-  color: #000 !important;
+  color: var(--hc-bg) !important;
 }
 
 body.a11y-high-contrast .a11y-panel-btn:hover *,
 body.a11y-high-contrast .a11y-panel-btn.active * {
-  color: #000 !important;
+  color: var(--hc-bg) !important;
 }
 
-/* Focus */
-body.a11y-high-contrast .a11y-panel-btn:focus-visible {
-  outline: 3px solid var(--hc-accent) !important;
-}
-
-/* ============================================
-   PROGRAM BADGE
-   ============================================ */
-
+/* ---------- Program and Opportunity Badges ---------- */
 body.a11y-high-contrast .program-badge {
   background: var(--hc-bg) !important;
   color: var(--hc-text) !important;
   border: none !important;
 }
 
-/* ============================================
-   OPPORTUNITY TYPE BADGES (Career, Freelance, etc.)
-   ============================================ */
-
-/* Opportunity type badges — force black text */
 body.a11y-high-contrast .opportunity-card .opp-type,
 body.a11y-high-contrast .opportunity-card .opp-type-career,
 body.a11y-high-contrast .opportunity-card .opp-type-volunteer,
@@ -349,18 +272,15 @@ body.a11y-high-contrast .opportunity-card .opp-type-career *,
 body.a11y-high-contrast .opportunity-card .opp-type-volunteer *,
 body.a11y-high-contrast .opportunity-card .opp-type-freelance *,
 body.a11y-high-contrast .opportunity-card .opp-type-mentorship * {
-  background: #ffff00 !important;
-  color: #000 !important;
-  border: 2px solid #000 !important;
-  fill: #000 !important;
-  stroke: #000 !important;
-  -webkit-text-fill-color: #000 !important;
+  background: var(--hc-accent) !important;
+  color: var(--hc-bg) !important;
+  border: 2px solid var(--hc-bg) !important;
+  fill: var(--hc-bg) !important;
+  stroke: var(--hc-bg) !important;
+  -webkit-text-fill-color: var(--hc-bg) !important;
 }
 
-/* ============================================
-   KEYBOARD FOCUS — TAB ACCESSIBILITY
-   ============================================ */
-
+/* ---------- Keyboard Focus ---------- */
 body.a11y-high-contrast
   :is(
     a,
@@ -398,20 +318,4 @@ body.a11y-high-contrast
   outline: 3px solid var(--hc-accent) !important;
   outline-offset: 4px !important;
   box-shadow: 0 0 0 3px var(--hc-bg) !important;
-}
-
-/* Target generic light cards inside privacy page */
-body.a11y-high-contrast .contact-info-card {
-  background: var(--hc-surface) !important;
-  color: var(--hc-text) !important;
-  border: 2px solid var(--hc-border) !important;
-  box-shadow: none !important;
-}
-
-body.a11y-high-contrast .contact-info-card * {
-  color: var(--hc-text) !important;
-}
-
-body.a11y-high-contrast .contact-info-card .contact-link {
-  color: var(--hc-accent) !important;
 }

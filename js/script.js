@@ -81,8 +81,9 @@
       slidesPerView: 1,
       spaceBetween: 24,
       loop: true,
+      speed: 500,
       autoplay: {
-        delay: 6000,
+        delay: 4500,
         disableOnInteraction: true,
         pauseOnMouseEnter: true,
       },
@@ -250,7 +251,7 @@
       );
     }
 
-    on(form, "submit", function (event) {
+    on(form, "submit", async function (event) {
       event.preventDefault();
       event.stopPropagation();
 
@@ -259,10 +260,44 @@
       var emailField = qs("#contact-email");
       validateEmailField(emailField);
 
-      if (form.checkValidity()) {
-        showSuccess();
-      } else {
+      // ❌ Se inválido → mostra erro
+      if (!form.checkValidity()) {
         showErrors();
+        return;
+      }
+
+      // ✅ Se válido → envia para Web3Forms
+      var formData = new FormData(form);
+
+      try {
+        var response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+
+        var result = await response.json();
+
+        if (result.success) {
+          showSuccess();
+          form.reset();
+          form.classList.remove("was-validated");
+        } else {
+          if (errorMessage) {
+            errorMessage.style.display = "block";
+            errorMessage.innerHTML =
+              '<p class="mb-0" style="color:#b91c1c;"><strong>Error sending message.</strong> Please try again.</p>';
+          }
+
+          announceToScreenReader("Error sending message. Please try again.");
+        }
+      } catch (error) {
+        if (errorMessage) {
+          errorMessage.style.display = "block";
+          errorMessage.innerHTML =
+            '<p class="mb-0" style="color:#b91c1c;"><strong>Connection error.</strong> Please try again later.</p>';
+        }
+
+        announceToScreenReader("Connection error. Please try again later.");
       }
     });
 
@@ -398,27 +433,29 @@
 
   function initNewsletterForms() {
     qsa(".newsletter-inline form").forEach(function (form) {
-      on(form, "submit", function (event) {
-        event.preventDefault();
-
+      on(form, "submit", function () {
         var emailInput = qs('input[type="email"]', form);
+        var successMessage = qs(".newsletter-success", form.parentElement);
+
         if (!emailInput || !emailInput.value) return;
 
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailInput.value)) return;
+        if (!emailPattern.test(emailInput.value.trim())) return;
 
-        emailInput.value = "";
-        emailInput.placeholder = "Thank you for subscribing!";
-        emailInput.setAttribute("aria-label", "Successfully subscribed");
+        // Show message immediately
+        if (successMessage) {
+          successMessage.classList.add("show");
+        }
 
-        announceToScreenReader(
-          "Thank you for subscribing to the Bloom newsletter.",
-        );
-
+        // Show success message immediately
         setTimeout(function () {
-          emailInput.placeholder = "Your email address";
-          emailInput.setAttribute("aria-label", "Email address");
-        }, 4000);
+          emailInput.value = "";
+        }, 500);
+
+        // Accessibility
+        announceToScreenReader(
+          "Thank you. Your subscription request has been sent. Please check your email to confirm.",
+        );
       });
     });
   }
@@ -844,3 +881,60 @@
     init();
   }
 })();
+
+/* storytelling */
+function initJourneyScroll() {
+  const image = document.querySelector("#journeyImage");
+  const items = document.querySelectorAll(".timeline-item[data-image]");
+
+  if (!image || items.length === 0) return;
+
+  let currentImage = image.getAttribute("src");
+
+  function changeImage(item) {
+    const newImage = item.getAttribute("data-image");
+    const newAlt = item.getAttribute("data-alt") || "";
+
+    if (!newImage || newImage === currentImage) return;
+
+    image.classList.add("is-changing");
+
+    setTimeout(() => {
+      image.setAttribute("src", newImage);
+      image.setAttribute("alt", newAlt);
+      currentImage = newImage;
+      image.classList.remove("is-changing");
+    }, 350);
+  }
+
+  function updateActiveItem() {
+    let activeItem = null;
+    let smallestDistance = Infinity;
+    const center = window.innerHeight / 2;
+
+    items.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const itemCenter = rect.top + rect.height / 2;
+      const distance = Math.abs(center - itemCenter);
+
+      if (distance < smallestDistance) {
+        smallestDistance = distance;
+        activeItem = item;
+      }
+    });
+
+    if (!activeItem) return;
+
+    items.forEach((item) => item.classList.remove("active"));
+    activeItem.classList.add("active");
+
+    changeImage(activeItem);
+  }
+
+  updateActiveItem();
+
+  window.addEventListener("scroll", updateActiveItem, { passive: true });
+  window.addEventListener("resize", updateActiveItem);
+}
+
+document.addEventListener("DOMContentLoaded", initJourneyScroll);

@@ -1,11 +1,11 @@
 /* ============================================
-   DARK MODE — BLOOM (Plum Version)
+   BLOOM — Dark Mode Theme (Plum Version)
    ============================================ */
 
 body.a11y-dark-mode {
   --dm-bg: #1c1622;
   --dm-surface: #261c2f;
-  --dm-surface-soft: #2f2238;
+  --dm-surface-soft: #2a1f33;
   --dm-card: #35273f;
   --dm-card-alt: #3f2d48;
   --dm-footer: #17121d;
@@ -17,20 +17,23 @@ body.a11y-dark-mode {
 
   --dm-link: var(--accent-rose);
   --dm-link-hover: var(--accent-blush);
+  --dm-focus: var(--accent-blush-light);
 
   --dm-border: rgba(255, 255, 255, 0.1);
   --dm-border-strong: rgba(255, 255, 255, 0.2);
-  --dm-focus: var(--accent-blush-light);
 
   background-color: var(--dm-bg) !important;
   color: var(--dm-text) !important;
 }
 
 /* ============================================
-   TYPOGRAPHY
+   Typography
    ============================================ */
 
-body.a11y-dark-mode :is(h1, h2, h3, h4, h5, h6) {
+body.a11y-dark-mode :is(h1, h2, h3, h4, h5, h6),
+body.a11y-dark-mode strong,
+body.a11y-dark-mode #partner-form-success h3,
+body.a11y-dark-mode .contact-info-card h4 {
   color: var(--dm-heading) !important;
 }
 
@@ -43,7 +46,8 @@ body.a11y-dark-mode
     .section-desc,
     .stat-label,
     .program-meta span,
-    .text-plum
+    .text-plum,
+    .feature-list li span:last-child
   ) {
   color: var(--dm-text-soft) !important;
 }
@@ -56,17 +60,18 @@ body.a11y-dark-mode a:hover {
   color: var(--dm-link-hover) !important;
 }
 
-body.a11y-dark-mode .navbar-brand span {
-  color: var(--accent-blush-light);
+body.a11y-dark-mode .navbar-brand span,
+body.a11y-dark-mode .stat-number {
+  color: var(--accent-blush-light) !important;
 }
 
-/* Program meta icons */
-body.a11y-dark-mode .program-meta span i {
-  color: rgba(255, 255, 255, 0.6) !important;
+body.a11y-dark-mode .program-meta span,
+body.a11y-dark-mode #opp-results-count {
+  color: var(--dm-text-muted) !important;
 }
 
 /* ============================================
-   BACKGROUNDS / SECTIONS
+   Backgrounds and Sections
    ============================================ */
 
 body.a11y-dark-mode .bg-ivory {
@@ -74,11 +79,10 @@ body.a11y-dark-mode .bg-ivory {
 }
 
 body.a11y-dark-mode :is(.bg-cream, .bg-warm-white) {
-  background-color: #2a1f33 !important;
+  background-color: var(--dm-surface-soft) !important;
 }
 
-body.a11y-dark-mode .hero-section,
-body.a11y-dark-mode .page-hero {
+body.a11y-dark-mode :is(.hero-section, .page-hero) {
   background: linear-gradient(135deg, #1c1622, #2f2238, #3f2d48) !important;
 }
 
@@ -93,13 +97,26 @@ body.a11y-dark-mode .bg-deep-plum {
   ) !important;
 }
 
+body.a11y-dark-mode hr {
+  border-color: var(--dm-border-strong) !important;
+  opacity: 1;
+}
+
 /* ============================================
-   CARDS / SURFACES
+   Cards and Surfaces
    ============================================ */
 
 body.a11y-dark-mode :is(.card-bloom, .program-card, .opportunity-card) {
   background: var(--dm-card) !important;
-  border-color: var(--dm-border) !important;
+  border-color: var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .testimonial-card {
+  border-color: var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .card-bloom strong.text-plum {
+  color: var(--dm-focus) !important;
 }
 
 body.a11y-dark-mode .contact-info-card {
@@ -111,64 +128,23 @@ body.a11y-dark-mode .contact-address {
   color: var(--dm-link) !important;
 }
 
-body.a11y-dark-mode .opp-search-filter {
+body.a11y-dark-mode .opp-search-filter,
+body.a11y-dark-mode .form-success-message {
   background: var(--dm-card-alt) !important;
-  border-color: var(--dm-border) !important;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-
-body.a11y-dark-mode .btn-bloom-primary {
-  background-color: var(--cta-primary) !important;
-  color: #fff !important;
-}
-
-body.a11y-dark-mode .btn-bloom-primary:hover {
-  background-color: var(--cta-primary-hover) !important;
-}
-
-body.a11y-dark-mode .btn-bloom-light {
-  background-color: var(--accent-rose) !important;
-  color: var(--deep-plum) !important;
-  border: 2px solid var(--accent-rose) !important;
-}
-
-body.a11y-dark-mode .btn-bloom-outline {
-  border: 2px solid rgba(255, 255, 255, 0.4) !important;
-  color: var(--accent-rose) !important;
-}
-
-/* CTA button hover to match primary */
-body.a11y-dark-mode .cta-banner .btn-bloom-light:hover {
-  background-color: var(--cta-primary) !important;
-  color: #fff !important;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
-}
-
-/* ============================================
-   FORMS
-   ============================================ */
-
-body.a11y-dark-mode :is(.form-control, .form-select) {
-  background: var(--dm-surface) !important;
-  color: var(--dm-text) !important;
   border-color: var(--dm-border-strong) !important;
 }
 
-body.a11y-dark-mode .opp-search-filter .form-control {
-  color: var(--dm-text-muted) !important;
+body.a11y-dark-mode .form-success-message {
+  color: var(--dm-text-soft) !important;
 }
 
-body.a11y-dark-mode .opp-search-filter .form-control::placeholder {
-  color: var(--dm-text-muted) !important;
-  opacity: 1;
+body.a11y-dark-mode .logo-card {
+  background: #ffffff !important;
+  border-color: var(--dm-border-strong) !important;
 }
 
 /* ============================================
-   NAVIGATION
+   Navigation
    ============================================ */
 
 body.a11y-dark-mode .navbar-bloom {
@@ -181,11 +157,120 @@ body.a11y-dark-mode .navbar-bloom .nav-link {
 
 body.a11y-dark-mode .navbar-bloom .nav-link:hover {
   background: rgba(212, 165, 172, 0.1) !important;
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 /* ============================================
-   FOOTER
+   Buttons
+   ============================================ */
+
+body.a11y-dark-mode .btn-bloom-primary {
+  background-color: var(--cta-primary) !important;
+  color: #ffffff !important;
+}
+
+body.a11y-dark-mode .btn-bloom-primary:hover {
+  background-color: var(--cta-primary-hover) !important;
+}
+
+body.a11y-dark-mode .btn-bloom-primary:disabled {
+  background: var(--dm-border-strong) !important;
+  color: var(--dm-text-muted) !important;
+  cursor: not-allowed;
+}
+
+body.a11y-dark-mode .btn-bloom-light {
+  background-color: var(--accent-rose) !important;
+  color: var(--deep-plum) !important;
+  border: 2px solid var(--accent-rose) !important;
+}
+
+body.a11y-dark-mode .btn-bloom-outline {
+  border: 2px solid var(--dm-focus) !important;
+  color: var(--dm-focus) !important;
+}
+
+body.a11y-dark-mode .btn-bloom-outline:hover,
+body.a11y-dark-mode .cta-outline-light:hover,
+body.a11y-dark-mode .cta-outline-light:focus-visible {
+  background: var(--dm-focus) !important;
+  color: #2a1830 !important;
+  border-color: var(--dm-focus) !important;
+}
+
+body.a11y-dark-mode .cta-banner .btn-bloom-light:hover {
+  background-color: var(--cta-primary) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+body.a11y-dark-mode .cta-outline-light {
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border-strong) !important;
+}
+
+/* ============================================
+   Forms and Inputs
+   ============================================ */
+
+body.a11y-dark-mode :is(.form-control, .form-select),
+body.a11y-dark-mode .newsletter-inline .input-group .form-control {
+  background: var(--dm-surface) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .opp-search-filter .form-control,
+body.a11y-dark-mode .opp-search-filter .form-control::placeholder,
+body.a11y-dark-mode .form-control::placeholder,
+body.a11y-dark-mode textarea::placeholder {
+  color: var(--dm-text-muted) !important;
+  opacity: 1;
+}
+
+body.a11y-dark-mode .form-error-message {
+  background: rgba(255, 180, 180, 0.12) !important;
+  border-color: #ffb4b4 !important;
+  color: #ffdede !important;
+}
+
+body.a11y-dark-mode .invalid-feedback {
+  color: #ffb4b4 !important;
+}
+
+/* Checkbox */
+body.a11y-dark-mode .form-check-input {
+  width: 18px;
+  height: 18px;
+  background-color: transparent !important;
+  border: 2px solid var(--dm-border-strong) !important;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+body.a11y-dark-mode .form-check-input:checked {
+  background-color: var(--cta-primary) !important;
+  border-color: var(--cta-primary) !important;
+  box-shadow: 0 0 0 2px rgba(212, 165, 172, 0.25);
+}
+
+body.a11y-dark-mode .form-check-input:checked::after {
+  content: "";
+}
+
+body.a11y-dark-mode .form-check-input:hover {
+  border-color: var(--cta-primary) !important;
+}
+
+body.a11y-dark-mode .form-check-input:focus {
+  outline: 3px solid var(--dm-focus) !important;
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+/* ============================================
+   Footer and Newsletter
    ============================================ */
 
 body.a11y-dark-mode .footer-bloom {
@@ -196,32 +281,142 @@ body.a11y-dark-mode .footer-bloom :is(p, a) {
   color: var(--dm-text-soft) !important;
 }
 
+body.a11y-dark-mode .newsletter-inline {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--dm-border) !important;
+}
+
+body.a11y-dark-mode .newsletter-success {
+  color: var(--dm-text-soft) !important;
+}
+
 /* ============================================
-   ICONS / SPECIAL COMPONENTS
+   Icons and Decorative Elements
    ============================================ */
 
-/* About page icons match home style */
-body.a11y-dark-mode .about-values .value-icon {
+body.a11y-dark-mode :is(.about-values .value-icon, .card-icon, .contact-info-icon) {
   background: var(--accent-blush-light) !important;
   color: var(--deep-plum) !important;
   border: none !important;
 }
 
-/* Opportunity badges */
-body.a11y-dark-mode
-  :is(
-    .opportunity-card .opp-type,
-    .opportunity-card .opp-type-career,
-    .opportunity-card .opp-type-freelance
-  ) {
+body.a11y-dark-mode .material-symbols-outlined {
+  color: inherit !important;
+}
+
+/* ============================================
+   Timeline / Journey Section
+   ============================================ */
+
+body.a11y-dark-mode .timeline-line {
+  background: var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .timeline-dot,
+body.a11y-dark-mode .timeline-item.active .timeline-dot {
+  background: var(--dm-focus) !important;
+  outline-color: var(--dm-bg) !important;
+}
+
+body.a11y-dark-mode .timeline-dot {
+  opacity: 0.8;
+}
+
+body.a11y-dark-mode .timeline-year {
+  color: var(--dm-focus) !important;
+}
+
+body.a11y-dark-mode .timeline-item:not(.active) {
+  opacity: 0.65;
+}
+
+body.a11y-dark-mode .timeline-item:not(.active) :is(h3, p, .timeline-year) {
+  color: var(--dm-text-muted) !important;
+}
+
+/* ============================================
+   Opportunity Cards, Badges and Filters
+   ============================================ */
+
+body.a11y-dark-mode .program-badge {
+  background: var(--dm-focus) !important;
+  color: #2a1830 !important;
+  border: 1px solid var(--dm-focus) !important;
+}
+
+body.a11y-dark-mode .filter-btn {
+  background: var(--dm-surface) !important;
+  color: var(--dm-text-soft) !important;
+  border-color: var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .filter-btn:hover,
+body.a11y-dark-mode .filter-btn:focus-visible,
+body.a11y-dark-mode .filter-btn.active {
+  background: var(--dm-focus) !important;
+  color: #2a1830 !important;
+  border-color: var(--dm-focus) !important;
+}
+
+body.a11y-dark-mode .opportunity-card .opp-tag {
+  background: var(--dm-card-alt) !important;
+  color: var(--dm-text-soft) !important;
+  border: 1px solid var(--dm-border-strong) !important;
+}
+
+body.a11y-dark-mode .opp-type {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--dm-text-soft);
+  border: 1px solid var(--dm-border-strong);
+}
+
+body.a11y-dark-mode .opp-type-career {
+  background: rgba(212, 165, 172, 0.15);
+  color: var(--accent-blush-light);
+  border-color: rgba(212, 165, 172, 0.4);
+}
+
+body.a11y-dark-mode .opp-type-freelance {
+  background: rgba(180, 200, 255, 0.15);
+  color: #c9d8ff;
+  border-color: rgba(180, 200, 255, 0.4);
+}
+
+body.a11y-dark-mode .opp-type-mentorship {
+  background: rgba(180, 255, 210, 0.15);
+  color: #bfffd6;
+  border-color: rgba(180, 255, 210, 0.4);
+}
+
+body.a11y-dark-mode .opp-type-volunteer {
+  background: rgba(255, 220, 180, 0.15);
+  color: #ffe0b3;
+  border-color: rgba(255, 220, 180, 0.4);
+}
+
+/* ============================================
+   Contact / Partner Cards
+   ============================================ */
+
+body.a11y-dark-mode a.contact-info-card {
   color: var(--dm-text-soft) !important;
 }
 
-body.a11y-dark-mode :is(.opportunity-card .opp-type-mentorship) {
+body.a11y-dark-mode a.contact-info-card:hover,
+body.a11y-dark-mode a.contact-info-card:focus-visible {
   background: var(--dm-card-alt) !important;
+  outline: 3px solid var(--dm-focus) !important;
+  outline-offset: 3px !important;
 }
+
 /* ============================================
-   ACCESSIBILITY / FOCUS
+   Accessibility and Focus States
    ============================================ */
 
 body.a11y-dark-mode .btn-bloom-light:focus,
@@ -245,8 +440,7 @@ body.a11y-dark-mode .btn-bloom-primary:focus-visible {
 }
 
 body.a11y-dark-mode :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus,
-body.a11y-dark-mode
-  :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus-visible {
+body.a11y-dark-mode :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus-visible {
   outline: 3px solid var(--dm-focus) !important;
   outline-offset: 3px !important;
   color: var(--dm-focus) !important;

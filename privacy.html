@@ -23,6 +23,15 @@
 
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
+
+  /*microsoft Clarity tracking code*/
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wi82la4p55");
+  </script>
 </head>
 
 <body>
@@ -56,7 +65,7 @@
   <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero" aria-label="Privacy Policy">
+    <section class="page-hero" aria-labelledby="privacy-hero-heading">
       <div class="container">
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumb">
@@ -65,7 +74,7 @@
           </ol>
         </nav>
 
-        <h1 data-aos="fade-up">Privacy Policy</h1>
+        <h1 id="privacy-hero-heading" data-aos="fade-up">Privacy Policy</h1>
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100" style="max-width: 720px;">
           Your privacy matters to us. This policy explains how Bloom collects, uses, stores, and protects your personal information when you use our website, programs, and services.
         </p>
@@ -192,10 +201,10 @@
     </section>
 
     <!-- CTA -->
-    <section class="section-padding bg-cream" aria-label="Call to action">
+    <section class="section-padding bg-cream" aria-labelledby="privacy-cta-heading">
       <div class="container">
         <div class="cta-banner text-center" data-aos="zoom-in">
-          <h2>Questions About Your Privacy?</h2>
+          <h2 id="privacy-cta-heading">Questions About Your Privacy?</h2>
           <p class="mt-3 mb-4" style="max-width: 620px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
             We believe trust is built through transparency. If you would like clarification about how your data is used, our team is here to help.
           </p>
@@ -217,15 +226,21 @@
             Your experience is your superpower.
           </p>
 
-          <div class="footer-social mt-3" aria-label="Social media links">
-            <span aria-label="LinkedIn coming soon" title="LinkedIn coming soon">
-              <img src="./icons/linkedIn.svg" alt="">
+          <div class="footer-social mt-3">
+
+            <span>
+              <img src="./icons/linkedIn.svg" alt="" aria-hidden="true">
+              <span class="visually-hidden">LinkedIn coming soon</span>
             </span>
-            <span aria-label="Instagram coming soon" title="Instagram coming soon">
-              <img src="./icons/instagram.svg" alt="">
+
+            <span>
+              <img src="./icons/instagram.svg" alt="" aria-hidden="true">
+              <span class="visually-hidden">Instagram coming soon</span>
             </span>
-            <span aria-label="Facebook coming soon" title="Facebook coming soon">
-              <img src="./icons/face.svg" alt="">
+
+            <span>
+              <img src="./icons/face.svg" alt="" aria-hidden="true">
+              <span class="visually-hidden">Facebook coming soon</span>
             </span>
           </div>
         </div>
@@ -257,7 +272,7 @@
           <div class="newsletter-inline">
             <form class="input-group" aria-label="Newsletter signup">
               <label for="newsletter-email-privacy" class="visually-hidden">Email address</label>
-              <input type="email" class="form-control" id="newsletter-email-privacy" placeholder="Your email address" aria-label="Email address" required>
+              <input type="email" class="form-control" id="newsletter-email-privacy" placeholder="Your email address" required>
               <button class="btn btn-bloom btn-bloom-primary" type="submit">Subscribe</button>
             </form>
           </div>

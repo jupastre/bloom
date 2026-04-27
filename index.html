@@ -25,6 +25,15 @@
 
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
+
+  /*microsoft Clarity tracking code*/
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wi82la4p55");
+  </script>
 </head>
 
 <body>
@@ -70,13 +79,13 @@
   <main id="main-content">
 
     <!-- Hero Section -->
-    <section class="hero-section" aria-label="Welcome to Bloom">
+    <section class="hero-section" aria-labelledby="hero-heading">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-aos="fade-right">
             <div class="hero-content">
               <p class="section-label mb-3">Welcome to Bloom</p>
-              <h1>Your Next Chapter Starts <span class="accent">Here</span></h1>
+              <h1 id="hero-heading">Your Next Chapter Starts <span class="accent">Here</span></h1>
               <p class="hero-subtitle">
                 For women over 40 ready to rediscover purpose, relaunch their careers, and rebuild their identity—with clarity, confidence, and community.
               </p>
@@ -100,31 +109,37 @@
     </section>
 
     <!-- Trusted By / Social Proof Strip -->
-    <section class="section-padding bg-warm-white" aria-label="Platform statistics">
+    <section class="section-padding bg-warm-white" aria-labelledby="stats-heading">
       <div class="container">
-        <div class="row g-4 text-center">
-          <div class="col-6 col-md-3" data-aos="fade-up">
-            <div class="stat-item">
-              <div class="stat-number" aria-label="Over 12,000 women supported">12,000+</div>
-              <div class="stat-label">Women Supported</div>
+
+        <div class="container">
+
+          <h2 id="stats-heading" class="visually-hidden">Platform statistics</h2>
+
+          <div class="row g-4 text-center">
+            <div class="col-6 col-md-3" data-aos="fade-up">
+              <div class="stat-item">
+                <div class="stat-number" aria-label="Over 12,000 women supported">12,000+</div>
+                <div class="stat-label">Women Supported</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="stat-item">
-              <div class="stat-number" aria-label="94 percent success rate">94%</div>
-              <div class="stat-label">Success Rate</div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="stat-item">
+                <div class="stat-number" aria-label="94 percent success rate">94%</div>
+                <div class="stat-label">Success Rate</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-item">
-              <div class="stat-number" aria-label="Over 200 partner companies">200+</div>
-              <div class="stat-label">Partner Companies</div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="stat-item">
+                <div class="stat-number" aria-label="Over 200 partner companies">200+</div>
+                <div class="stat-label">Partner Companies</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-item">
-              <div class="stat-number" aria-label="35 countries reached">35</div>
-              <div class="stat-label">Countries Reached</div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="stat-item">
+                <div class="stat-number" aria-label="35 countries reached">35</div>
+                <div class="stat-label">Countries Reached</div>
+              </div>
             </div>
           </div>
         </div>
@@ -304,9 +319,11 @@
                   At 52, I believed my best professional years were behind me. Bloom showed me they were just beginning. Within six months, I launched a consulting practice—and now I feel aligned, confident, and excited about what’s ahead.
                 </blockquote>
                 <div class="testimonial-author">
-                  <div class="testimonial-avatar" aria-hidden="true">SR</div>
+                  <div class="testimonial-avatar">
+                    <img src="./images/Zahra.png" alt="Zahra R., Management Consultant, Age 52" width="72" height="72" loading="lazy">
+                  </div>
                   <div class="testimonial-author-info">
-                    <span class="name">Sarah R.</span>
+                    <span class="name">Zahra R.</span>
                     <span class="role">Management Consultant, Age 52</span>
                   </div>
                 </div>
@@ -319,7 +336,9 @@
                   After 25 years in education, I felt lost when I retired early. Bloom helped me rediscover my passion and move into nonprofit leadership. Now I feel truly aligned, confident, and excited again about what’s ahead.
                 </blockquote>
                 <div class="testimonial-author">
-                  <div class="testimonial-avatar" aria-hidden="true">MT</div>
+                  <div class="testimonial-avatar">
+                    <img src="./images/Margareth.png" alt="Margaret T., Nonprofit Director, Age 58">
+                  </div>
                   <div class="testimonial-author-info">
                     <span class="name">Margaret T.</span>
                     <span class="role">Nonprofit Director, Age 58</span>
@@ -334,9 +353,11 @@
                   I felt invisible in the job market after years of experience. Bloom helped me rediscover my value and rebuild confidence. Soon after, I landed a role that truly sees me—and I feel recognized and empowered again.
                 </blockquote>
                 <div class="testimonial-author">
-                  <div class="testimonial-avatar" aria-hidden="true">LC</div>
+                  <div class="testimonial-avatar">
+                    <img src="./images/Yumi.png" alt="Yumi C., Senior Project Manager, Age 47">
+                  </div>
                   <div class="testimonial-author-info">
-                    <span class="name">Linda C.</span>
+                    <span class="name">Yumi C.</span>
                     <span class="role">Senior Project Manager, Age 47</span>
                   </div>
                 </div>
@@ -349,7 +370,9 @@
                   I was terrified of starting over at 61. Bloom gave me a safe, supportive space to rebuild my confidence. Soon after, I launched my own business—and now I feel capable, independent, and proud of myself.
                 </blockquote>
                 <div class="testimonial-author">
-                  <div class="testimonial-avatar" aria-hidden="true">DP</div>
+                  <div class="testimonial-avatar">
+                    <img src="./images/Diana.png" alt="Diana P., Entrepreneur &amp; Mentor, Age 61">
+                  </div>
                   <div class="testimonial-author-info">
                     <span class="name">Diana P.</span>
                     <span class="role">Entrepreneur &amp; Mentor, Age 61</span>
@@ -364,16 +387,16 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="section-padding bg-ivory" aria-label="Call to action">
+    <section class="section-padding bg-ivory" aria-labelledby="home-cta-heading">
       <div class="container">
         <div class="cta-banner text-center" data-aos="zoom-in">
-          <h2>Ready to Write Your Next Chapter?</h2>
+          <h2 id="home-cta-heading">Ready to Write Your Next Chapter?</h2>
           <p class="mt-3 mb-4" style="max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
             Join thousands of women over 40 who have transformed their careers and rediscovered their purpose with Bloom.
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
             <a href="programs.html" class="btn btn-bloom btn-bloom-light">Explore Programs</a>
-            <a href="contact.html" class="btn btn-bloom btn-bloom-outline" style="border-color: rgba(255,255,255,0.5); color: #fff;">Contact Us</a>
+            <a href="contact.html" class="btn btn-bloom btn-bloom-outline cta-outline-light">Contact Us</a>
           </div>
         </div>
       </div>
@@ -391,15 +414,21 @@
             A premium career transition and identity rebuilding platform for women aged 40 and beyond.
             Your experience is your superpower.
           </p>
-          <div class="footer-social mt-3" aria-label="Social media links">
-            <span aria-label="LinkedIn coming soon" title="LinkedIn coming soon">
-              <img src="./icons/linkedIn.svg" alt="">
+          <div class="footer-social mt-3">
+
+            <span>
+              <img src="./icons/linkedIn.svg" alt="" aria-hidden="true">
+              <span class="visually-hidden">LinkedIn coming soon</span>
             </span>
-            <span aria-label="Instagram coming soon" title="Instagram coming soon">
-              <img src="./icons/instagram.svg" alt="">
+
+            <span>
+              <img src="./icons/instagram.svg" alt="" aria-hidden="true">
+              <span class="visually-hidden">Instagram coming soon</span>
             </span>
-            <span aria-label="Facebook coming soon" title="Facebook coming soon">
-              <img src="./icons/face.svg" alt="">
+
+            <span>
+              <img src="./icons/face.svg" alt="" aria-hidden="true">
+              <span class="visually-hidden">Facebook coming soon</span>
             </span>
           </div>
 
@@ -429,11 +458,25 @@
           <h5>Stay Inspired</h5>
           <p>Join our newsletter for career insights, stories of transformation, and exclusive opportunities.</p>
           <div class="newsletter-inline">
-            <form class="input-group" aria-label="Newsletter signup">
+            <form class="input-group newsletter-form" aria-label="Newsletter signup" action="https://dkit.us2.list-manage.com/subscribe/post?u=eb8647832367fa6c639bd7b86&amp;id=4739262468&amp;f_id=006171e0f0" method="post" target="mailchimp-hidden-frame">
               <label for="newsletter-email" class="visually-hidden">Email address</label>
-              <input type="email" class="form-control" id="newsletter-email" placeholder="Your email " aria-label="Email address" required>
-              <button class="btn btn-bloom btn-bloom-primary" type="submit">Subscribe</button>
+
+              <input type="email" class="form-control" id="newsletter-email" name="EMAIL" placeholder="Your email" required>
+
+              <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                <input type="text" name="b_eb8647832367fa6c639bd7b86_4739262468" tabindex="-1" value="">
+              </div>
+
+              <button class="btn btn-bloom btn-bloom-primary" type="submit">
+                Subscribe
+              </button>
             </form>
+
+            <p class="newsletter-success" role="status" aria-live="polite">
+              Thank you! Your subscription request has been sent. Please check your email to confirm.
+            </p>
+
+            <iframe name="mailchimp-hidden-frame" style="display:none;"></iframe>
           </div>
         </div>
       </div>
