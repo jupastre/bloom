@@ -217,6 +217,15 @@ img {
   outline-offset: 2px;
 }
 
+.skip-link:focus:not(:focus-visible) {
+  top: -100%;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+  color: var(--white);
+  outline: 3px solid var(--accent-rose);
+  outline-offset: 2px;
+}
 /* ---------- Focus States ---------- */
 *:focus-visible {
   outline: 3px solid var(--cta-primary);
@@ -2695,7 +2704,7 @@ main a:not(.btn-bloom) {
   /* --- Merged rules from another matching media block --- */
   .a11y-toolbar-toggle {
     position: fixed !important;
-    top: 60% !important;
+    top: 50% !important;
     right: 0 !important;
     bottom: auto !important;
     transform: translateY(-50%) !important;
@@ -2785,7 +2794,7 @@ main a:not(.btn-bloom) {
   }
 
   .btn-bloom.btn-bloom-primary[aria-label="Back to top"] {
-    right: 1rem !important;
+    right: 0.2rem !important;
     width: 44px !important;
     height: 44px !important;
   }
