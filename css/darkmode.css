@@ -160,6 +160,9 @@ body.a11y-dark-mode .navbar-bloom .nav-link:hover {
   color: #ffffff !important;
 }
 
+body.a11y-dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
 /* ============================================
    Buttons
    ============================================ */
@@ -255,10 +258,6 @@ body.a11y-dark-mode .form-check-input:checked {
   box-shadow: 0 0 0 2px rgba(212, 165, 172, 0.25);
 }
 
-body.a11y-dark-mode .form-check-input:checked::after {
-  content: "";
-}
-
 body.a11y-dark-mode .form-check-input:hover {
   border-color: var(--cta-primary) !important;
 }
@@ -294,9 +293,11 @@ body.a11y-dark-mode .newsletter-success {
    Icons and Decorative Elements
    ============================================ */
 
-body.a11y-dark-mode :is(.about-values .value-icon, .card-icon, .contact-info-icon) {
+body.a11y-dark-mode
+  :is(.about-values .value-icon, .card-icon, .contact-info-icon) {
   background: var(--accent-blush-light) !important;
   color: var(--deep-plum) !important;
+  -webkit-text-fill-color: var(--deep-plum) !important;
   border: none !important;
 }
 
@@ -440,7 +441,8 @@ body.a11y-dark-mode .btn-bloom-primary:focus-visible {
 }
 
 body.a11y-dark-mode :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus,
-body.a11y-dark-mode :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus-visible {
+body.a11y-dark-mode
+  :is(.btn-bloom-outline, .navbar-bloom .nav-link):focus-visible {
   outline: 3px solid var(--dm-focus) !important;
   outline-offset: 3px !important;
   color: var(--dm-focus) !important;

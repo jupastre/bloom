@@ -25,8 +25,14 @@
 
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/highcontrast.css" rel="stylesheet">
+  <link href="css/darkmode.css" rel="stylesheet">
 
-  <!-- Microsoft Clarity tracking code -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+  <!-- Clarity -->
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -34,6 +40,7 @@
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "wi82la4p55");
   </script>
+
 </head>
 
 <body>
@@ -87,13 +94,13 @@
               <p class="section-label mb-3">Welcome to Bloom</p>
               <h1 id="hero-heading">Your Next Chapter Starts <span class="accent">Here</span></h1>
               <p class="hero-subtitle">
-                For women over 40 ready to rediscover purpose, relaunch their careers, and rebuild their identity—with clarity, confidence, and community.
+                For women over 40 ready to rediscover purpose, relaunch their careers, and rebuild their identity — with clarity, confidence, and community.
               </p>
               <div class="hero-buttons d-flex flex-wrap gap-3">
-                <a href="programs.html" class="btn btn-bloom btn-bloom-primary">
+                <a href="programs.html" class="btn btn-bloom btn-bloom-primary" aria-label="Explore available programs for career transition and identity rebuilding">
                   Explore Programs
                 </a>
-                <a href="about.html" class="btn btn-bloom btn-bloom-outline">
+                <a href="about.html" class="btn btn-bloom btn-bloom-outline" aria-label="Learn more about Bloom's story and mission">
                   Our Story
                 </a>
               </div>
@@ -101,7 +108,7 @@
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
             <div class="hero-image-wrapper">
-              <img src="images/hero-woman.jpg" alt="Confident professional woman in her late 40s standing in a bright modern office with warm natural light, wearing a sophisticated blouse in soft rose tones" class="img-fluid hero-img" loading="eager" width="1792" height="2400">
+              <img src="images/hero-woman.webp" alt="Confident professional woman in her late 40s standing in a bright modern office with warm natural light, wearing a sophisticated blouse in soft rose tones" class="img-fluid hero-img" loading="eager" width="1792" height="2400">
             </div>
           </div>
         </div>
@@ -154,7 +161,7 @@
           <h2 id="what-we-do-heading">Transformation, Not Just Transition</h2>
           <div class="divider-bloom"></div>
           <p class="section-desc">
-            After 40, a career change isn’t a loss — it’s a turning point. A chance to align your work with who you truly are. We don’t just help you find a job—we help you step into a new chapter.
+            After 40, a career change isn’t a loss — it’s a turning point. A chance to align your work with who you truly are. We don’t just help you find a job — we help you step into a new chapter.
           </p>
         </div>
         <div class="row g-4 mt-2">
@@ -162,7 +169,7 @@
             <div class="card-bloom">
               <div class="card-icon" aria-hidden="true">&#9733;</div>
               <h4>Career Transition</h4>
-              <p>Strategic guidance to help you navigate your next career move with clarity and confidence—at any stage of life.</p>
+              <p>Strategic guidance to help you navigate your next career move with clarity and confidence — at any stage of life.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
@@ -198,7 +205,7 @@
             <div class="editorial-offset">
               <div class="offset-bg"></div>
               <div class="offset-content">
-                <img src="images/workshop-women.jpg" alt="Diverse group of women in a collaborative workshop setting, sharing stories and supporting each other in a warm, naturally lit room" class="img-fluid rounded-bloom" loading="lazy" width="2528" height="1696">
+                <img src="images/workshop-women.webp" alt="Diverse group of women in a collaborative workshop setting, sharing stories and supporting each other in a warm, naturally lit room" class="img-fluid rounded-bloom" loading="lazy" width="2528" height="1696">
               </div>
             </div>
           </div>
@@ -207,7 +214,7 @@
             <h2 id="why-bloom-heading">Designed for Women Who Have Lived, Learned, and Are Ready for More</h2>
             <div class="divider-bloom"></div>
             <p>
-              After decades of experience—raising families, building careers, and navigating life’s complexities—you deserve a space that truly understands your journey. Bloom was created for women over 40 who are ready to step into their next chapter with clarity, confidence, and purpose.
+              After decades of experience — raising families, building careers, and navigating life’s complexities — you deserve a space that truly understands your journey. Bloom was created for women over 40 who are ready to step into their next chapter with clarity, confidence, and purpose.
             </p>
             <ul class="feature-list">
               <li>
@@ -224,7 +231,7 @@
               </li>
               <li>
                 <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                <span>Programs designed for real life—flexible, compassionate, and effective</span>
+                <span>Programs designed for real life — flexible, compassionate, and effective</span>
               </li>
             </ul>
             <a href="about.html" class="btn btn-bloom btn-bloom-primary mt-3">Learn More About Us</a>
@@ -258,14 +265,14 @@
                 </div>
                 <h4>Career Reinvention Intensive</h4>
                 <p>A comprehensive 12-week journey to help you discover your next professional direction and build a clear, actionable path forward.</p>
-                <a href="programs.html" class="btn btn-bloom btn-bloom-outline w-100">Learn More</a>
+                <a href="programs.html" class="btn btn-bloom btn-bloom-outline w-100" aria-label="Learn more about the Career Reinvention Intensive">Learn More</a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="program-card">
               <div class="program-image">
-                <img src="images/wellbeing.jpg" alt="Serene woman in her 50s journaling in a light-filled room surrounded by plants and warm decor" class="img-fluid" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+                <img src="images/wellbeing.webp" alt="Serene woman in her 50s journaling in a light-filled room surrounded by plants and warm decor" class="img-fluid" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="program-body">
                 <div class="program-meta">
@@ -274,7 +281,7 @@
                 </div>
                 <h4>Identity &amp; Purpose Workshop</h4>
                 <p>Reconnect with your core values and strengths through guided exercises, supportive group coaching, and meaningful reflection.</p>
-                <a href="programs.html" class="btn btn-bloom btn-bloom-outline w-100">Learn More</a>
+                <a href="programs.html" class="btn btn-bloom btn-bloom-outline w-100" aria-label="Learn more about the Identity & Purpose Workshop">Learn More</a>
               </div>
             </div>
           </div>
@@ -282,7 +289,7 @@
             <div class="program-card">
               <div class="program-image">
                 <span class="program-badge">New</span>
-                <img src="images/transformation.jpg" alt="Radiant woman walking confidently through a modern city street at golden hour" class="img-fluid" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+                <img src="images/transformation.webp" alt="Radiant woman walking confidently through a modern city street at golden hour" class="img-fluid" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="program-body">
                 <div class="program-meta">
@@ -290,14 +297,14 @@
                   <span>&#9733; 4.7 Rating</span>
                 </div>
                 <h4>Digital Skills Accelerator</h4>
-                <p>Build confidence with essential digital tools and develop the skills today’s employers value—at your own pace and comfort level.</p>
-                <a href="programs.html" class="btn btn-bloom btn-bloom-outline w-100">Learn More</a>
+                <p>Build confidence with essential digital tools and develop the skills today’s employers value — at your own pace and comfort level.</p>
+                <a href="programs.html" class="btn btn-bloom btn-bloom-outline w-100" aria-label="Learn more about the Digital Skills Accelerator">Learn More</a>
               </div>
             </div>
           </div>
         </div>
         <div class="text-center mt-5" data-aos="fade-up">
-          <a href="programs.html" class="btn btn-bloom btn-bloom-primary">View All Programs</a>
+          <a href="programs.html" class="btn btn-bloom btn-bloom-primary" aria-label="View all available programs">View All Programs</a>
         </div>
       </div>
     </section>
@@ -309,83 +316,108 @@
           <span class="section-label">Stories of Transformation</span>
           <h2 id="testimonials-heading">Hear from Women Who Bloomed</h2>
           <div class="divider-bloom"></div>
+          <p id="testimonials-description" class="visually-hidden">
+            This section contains testimonials from women who transformed their careers with Bloom.
+          </p>
         </div>
-        <div class="swiper testimonial-swiper mt-4" data-aos="fade-up">
+
+        <div class="swiper testimonial-swiper mt-4" data-aos="fade-up" role="region" aria-labelledby="testimonials-heading" aria-live="polite" aria-atomic="true">
           <div class="swiper-wrapper">
+
             <!-- Slide 1 -->
-            <div class="swiper-slide">
+            <article class="swiper-slide">
               <div class="testimonial-card">
                 <blockquote>
-                  At 52, I believed my best professional years were behind me. Bloom showed me they were just beginning. Within six months, I launched a consulting practice—and now I feel aligned, confident, and excited about what’s ahead.
+                  <p>
+                    At 52, I believed my best professional years were behind me. Bloom showed me they were just beginning. Within six months, I launched a consulting practice — and now I feel aligned, confident, and excited about what’s ahead.
+                  </p>
                 </blockquote>
-                <div class="testimonial-author">
+
+                <footer class="testimonial-author">
                   <div class="testimonial-avatar">
-                    <img src="./images/Zahra.png" alt="Zahra R., Management Consultant, Age 52" width="72" height="72" loading="lazy">
+                    <img src="./images/Zahra.webp" alt="" width="72" height="72" loading="lazy">
                   </div>
+
                   <div class="testimonial-author-info">
                     <span class="name">Zahra R.</span>
                     <span class="role">Management Consultant, Age 52</span>
                   </div>
-                </div>
+                </footer>
               </div>
-            </div>
+            </article>
+
             <!-- Slide 2 -->
-            <div class="swiper-slide">
+            <article class="swiper-slide">
               <div class="testimonial-card">
                 <blockquote>
-                  After 25 years in education, I felt lost when I retired early. Bloom helped me rediscover my passion and move into nonprofit leadership. Now I feel truly aligned, confident, and excited again about what’s ahead.
+                  <p>
+                    After 25 years in education, I felt lost when I retired early. Bloom helped me rediscover my passion and move into nonprofit leadership. Now I feel truly aligned, confident, and excited again about what’s ahead.
+                  </p>
                 </blockquote>
-                <div class="testimonial-author">
+
+                <footer class="testimonial-author">
                   <div class="testimonial-avatar">
-                    <img src="./images/Margareth.png" alt="Margaret T., Nonprofit Director, Age 58">
+                    <img src="./images/Margareth (1).webp" alt="" loading="lazy">
                   </div>
+
                   <div class="testimonial-author-info">
                     <span class="name">Margaret T.</span>
                     <span class="role">Nonprofit Director, Age 58</span>
                   </div>
-                </div>
+                </footer>
               </div>
-            </div>
+            </article>
+
             <!-- Slide 3 -->
-            <div class="swiper-slide">
+            <article class="swiper-slide">
               <div class="testimonial-card">
                 <blockquote>
-                  I felt invisible in the job market after years of experience. Bloom helped me rediscover my value and rebuild confidence. Soon after, I landed a role that truly sees me—and I feel recognized and empowered again.
+                  <p>
+                    I felt invisible in the job market after years of experience. Bloom helped me rediscover my value and rebuild confidence. Soon after, I landed a role that truly sees me — and I feel recognized and empowered again.
+                  </p>
                 </blockquote>
-                <div class="testimonial-author">
+
+                <footer class="testimonial-author">
                   <div class="testimonial-avatar">
-                    <img src="./images/Yumi.png" alt="Yumi C., Senior Project Manager, Age 47">
+                    <img src="./images/Yumi.webp" alt="" loading="lazy">
                   </div>
+
                   <div class="testimonial-author-info">
                     <span class="name">Yumi C.</span>
                     <span class="role">Senior Project Manager, Age 47</span>
                   </div>
-                </div>
+                </footer>
               </div>
-            </div>
+            </article>
+
             <!-- Slide 4 -->
-            <div class="swiper-slide">
+            <article class="swiper-slide">
               <div class="testimonial-card">
                 <blockquote>
-                  I was terrified of starting over at 61. Bloom gave me a safe, supportive space to rebuild my confidence. Soon after, I launched my own business—and now I feel capable, independent, and proud of myself.
+                  <p>
+                    I was terrified of starting over at 61. Bloom gave me a safe, supportive space to rebuild my confidence. Soon after, I launched my own business — and now I feel capable, independent, and proud of myself.
+                  </p>
                 </blockquote>
-                <div class="testimonial-author">
+
+                <footer class="testimonial-author">
                   <div class="testimonial-avatar">
-                    <img src="./images/Diana.png" alt="Diana P., Entrepreneur &amp; Mentor, Age 61">
+                    <img src="./images/Diana (1).webp" alt="" loading="lazy">
                   </div>
+
                   <div class="testimonial-author-info">
                     <span class="name">Diana P.</span>
                     <span class="role">Entrepreneur &amp; Mentor, Age 61</span>
                   </div>
-                </div>
+                </footer>
               </div>
-            </div>
+            </article>
+
           </div>
-          <div class="swiper-pagination mt-4"></div>
+
+          <div class="swiper-pagination mt-4" role="navigation" aria-label="Testimonials navigation"></div>
         </div>
       </div>
     </section>
-
     <!-- CTA Banner -->
     <section class="section-padding bg-ivory" aria-labelledby="home-cta-heading">
       <div class="container">
@@ -497,6 +529,8 @@
 
   <!-- Custom JS -->
   <script src="js/script.js"></script>
+
+
 
 </body>
 

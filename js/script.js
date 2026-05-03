@@ -95,6 +95,7 @@
         enabled: true,
         onlyInViewport: true,
       },
+      /*
       a11y: {
         enabled: true,
         prevSlideMessage: "Previous testimonial",
@@ -102,7 +103,10 @@
         firstSlideMessage: "This is the first testimonial",
         lastSlideMessage: "This is the last testimonial",
         paginationBulletMessage: "Go to testimonial {{index}}",
-      },
+      },*/
+
+      a11y: false,
+
       breakpoints: {
         768: {
           slidesPerView: 2,
@@ -873,6 +877,7 @@
     initSmoothScroll();
     initBackToTop();
     initAccordionA11y();
+    initCookies();
   }
 
   if (document.readyState === "loading") {
@@ -881,6 +886,70 @@
     init();
   }
 })();
+
+/* ============================================
+   Cookies (Osano + Clarity control)
+   ============================================ */
+
+function initCookies() {
+  if (typeof window.cookieconsent === "undefined") return;
+
+  function loadClarity() {
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "wi82la4p55");
+  }
+
+  var rootStyles = getComputedStyle(document.documentElement);
+
+  var cookieBg = rootStyles.getPropertyValue("--cookie-bg").trim();
+  var cookieText = rootStyles.getPropertyValue("--cookie-text").trim();
+  var cookieButtonBg = rootStyles.getPropertyValue("--cookie-button-bg").trim();
+  var cookieButtonText = rootStyles
+    .getPropertyValue("--cookie-button-text")
+    .trim();
+
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: cookieBg,
+        text: cookieText,
+      },
+      button: {
+        background: cookieButtonBg,
+        text: cookieButtonText,
+      },
+    },
+    theme: "classic",
+    position: "bottom",
+    type: "opt-in",
+
+    content: {
+      message: "This website uses cookies to improve your experience.",
+      allow: "Accept",
+      deny: "Decline",
+      link: "Learn more",
+      href: "privacy.html",
+    },
+
+    onInitialise: function (status) {
+      if (status === "allow") loadClarity();
+    },
+
+    onStatusChange: function (status) {
+      if (status === "allow") loadClarity();
+    },
+  });
+}
 
 /* storytelling */
 function initJourneyScroll() {

@@ -6,7 +6,7 @@
 body.a11y-high-contrast {
   --hc-bg: #000;
   --hc-surface: #111;
-  --hc-text: #fff;
+  --hc-text: #ffffff;
   --hc-accent: #ffff00;
   --hc-border: #fff;
   --hc-radius: 20px;
@@ -29,6 +29,7 @@ body.a11y-high-contrast
     span,
     label,
     .form-label,
+    .stat-label,
     .contact-address,
     .testimonial-card blockquote,
     .testimonial-card p,
@@ -40,7 +41,14 @@ body.a11y-high-contrast
   color: var(--hc-text) !important;
 }
 
-body.a11y-high-contrast :is(a, .stat-number, .text-plum, .contact-info-card .contact-link) {
+body.a11y-high-contrast .timeline-dot,
+body.a11y-high-contrast .timeline-item.active .timeline-dot {
+  background: var(--hc-accent) !important;
+  outline-color: var(--hc-bg) !important;
+}
+
+body.a11y-high-contrast
+  :is(a, .stat-number, .text-plum, .contact-info-card .contact-link) {
   color: var(--hc-accent) !important;
 }
 
@@ -118,7 +126,8 @@ body.a11y-high-contrast
   background: var(--hc-bg) !important;
   border: 2px solid var(--hc-border) !important;
   border-radius: 50% !important;
-  color: var(--hc-accent) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 body.a11y-high-contrast
@@ -318,4 +327,41 @@ body.a11y-high-contrast
   outline: 3px solid var(--hc-accent) !important;
   outline-offset: 4px !important;
   box-shadow: 0 0 0 3px var(--hc-bg) !important;
+}
+
+/* ===== COOKIE BANNER - HIGH CONTRAST ===== */
+
+body.a11y-high-contrast .cc-window {
+  background: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+  border: 2px solid var(--hc-border) !important;
+}
+
+body.a11y-high-contrast .cc-btn {
+  background: var(--hc-accent) !important;
+  color: var(--hc-bg) !important;
+  border: 2px solid var(--hc-accent) !important;
+}
+
+body.a11y-high-contrast .cc-deny {
+  background: transparent !important;
+  color: var(--hc-text) !important;
+  border: 2px solid var(--hc-border) !important;
+}
+
+/* Force cookie Accept button text color in high contrast */
+body.a11y-high-contrast .cc-window .cc-compliance a.cc-btn.cc-allow,
+body.a11y-high-contrast .cc-window .cc-compliance .cc-btn.cc-allow {
+  background: var(--hc-accent) !important;
+  color: var(--hc-bg) !important;
+  -webkit-text-fill-color: var(--hc-bg) !important;
+  border: 2px solid var(--hc-accent) !important;
+}
+
+/* Hover - Accept button (high contrast) */
+body.a11y-high-contrast .cc-window .cc-compliance .cc-btn.cc-allow:hover {
+  background: var(--hc-text) !important; /* branco */
+  color: var(--hc-bg) !important; /* preto */
+  -webkit-text-fill-color: var(--hc-bg) !important;
+  border: 2px solid var(--hc-text) !important;
 }
