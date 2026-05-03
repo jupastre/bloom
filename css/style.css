@@ -1834,7 +1834,7 @@ img {
 body.a11y-highlight-links main a:not(.btn-bloom):not(.contact-info-card),
 body.a11y-highlight-links .footer-bloom a:not(.btn-bloom) {
   background-color: rgba(255, 255, 0, 0.28) !important;
-  color: #2d2a26 !important;
+  color: #fff !important;
   text-decoration: underline !important;
   text-underline-offset: 3px;
   outline: 2px solid rgba(255, 255, 0, 0.65);
